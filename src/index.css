@@ -1,0 +1,74 @@
+:root {
+  font-family: "Work Sans";
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+textarea,
+button,
+select {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  padding: 0;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+section,
+article,
+aside,
+header,
+footer,
+nav,
+main {
+  display: block;
+}
