@@ -1,0 +1,23 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Position each card */
+.list :nth-child(1) {
+  grid-column: 2 / span 3;
+}
+.list :nth-child(2) {
+  grid-column: 5 / span 3;
+}
+.list :nth-child(3) {
+  grid-column: 8 / span 3;
+}
+.list :nth-child(4) {
+  grid-column: 4 / span 3;
+}
+.list :nth-child(5) {
+  grid-column: 7 / span 3;
+}

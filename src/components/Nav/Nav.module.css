@@ -3,7 +3,34 @@
   gap: 35px;
 }
 
+.list > li {
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.list > li:hover {
+  color: var(--accent-color);
+  transform: scale(1.25);
+}
+
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: 765px;
+  margin-top: 30px;
+}
+
+.footerList {
+  text-align: start;
+  gap: 15px;
+}
+
+.footerList > li {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footerList > li:hover {
+  color: var(--third-color);
+  transform: scale(1.15);
 }

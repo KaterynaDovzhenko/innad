@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.list > li {
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.list > li:hover {
+  transform: scale(1.05);
+}
+
+.number {
+  font-size: 65px;
+}
+
+.plus {
+  color: var(--accent-color);
+}

@@ -7,15 +7,15 @@ import { useTranslation } from "react-i18next";
 export default function HomePage() {
   const { t } = useTranslation();
   return (
-    <div className={css.content}>
-      <div className={css.container}>
+    <section className={css.container}>
+      <div className={css.containerTitle}>
         <h1>Inna</h1>
         <h1 className={css.title}>Dovzhenko</h1>
         <p>{t("text-homepage")}</p>
       </div>
       <picture>
         <source srcSet={profileWebp} type="image/webp" />
-        <source srcSet={profileJpg} />
+        <source srcSet={profileJpg} type="image/jpeg" />
         <img
           className={css.img}
           src={profileJpg}
@@ -24,6 +24,22 @@ export default function HomePage() {
       </picture>
       <div className={css.bg}></div>
       <ContactBtn></ContactBtn>
-    </div>
+      <ul className={css.listLangTop}>
+        <li>A1</li>
+        <li>A2</li>
+        <li>B1</li>
+        <li>B2</li>
+        <li>C1</li>
+        <li>C2</li>
+      </ul>
+      <ul className={css.listLangBtm}>
+        <li>A1</li>
+        <li>A2</li>
+        <li>B1</li>
+        <li>B2</li>
+        <li>C1</li>
+        <li>C2</li>
+      </ul>
+    </section>
   );
 }

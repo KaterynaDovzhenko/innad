@@ -1,0 +1,12 @@
+.section {
+  padding-top: 150px;
+}
+
+.text {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  max-width: 80%;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: start;
+}

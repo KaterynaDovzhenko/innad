@@ -1,6 +1,26 @@
-.btn {
-  background-color: var(--accent-color);
+.activeBtn {
+  background-color: var(--text-color);
   color: var(--bg-color);
   padding: 10px 20px;
   border-radius: 15px;
+  font-size: 25px;
+  border: 2px solid var(--text-color);
+}
+
+.defaultBtn {
+  border: 2px solid var(--text-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 25px;
+  transition: background-color 0.5s ease;
+}
+
+.defaultBtn:hover {
+  background-color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  gap: 20px;
 }

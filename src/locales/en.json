@@ -1,3 +1,84 @@
 {
-  "text-homepage": "Whether you’re aiming to improve your grammar, expand your vocabulary, or prepare for exams, I provide personalized lessons that cater to your individual needs. Together, we’ll build confidence in your English skills and help you reach your goals—one step at a time."
+  "text-homepage": "Whether you’re aiming to improve your grammar, expand your vocabulary, or prepare for exams, I provide personalized lessons that cater to your individual needs. Together, we’ll build confidence in your English skills and help you reach your goals—one step at a time.",
+  "contact-btn": "Contact Me",
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "lessons": "Lessons",
+    "pricing": "Pricing",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About.",
+    "header": "Empowering Minds with Marketing Expertise and Strategic Insight",
+    "text": "I’m an enthusiastic and dedicated English tutor with 25 years of experience. My teaching style focuses on customising lessons to fit each student’s unique learning goals—whether it’s enhancing communication skills, preparing for exams, or improving writing techniques. I aim to foster a positive, motivating space where you can grow your English proficiency at your own pace and with confidence. Let’s embark on this learning journey together!",
+    "year": "years of experience teaching at universities worldwide",
+    "students": "of students guided through effective exam preparation strategies",
+    "articles": "prestigious international journals and renowned academic conferences"
+  },
+  "lessons": {
+    "title": "Lessons.",
+    "text": "I offer English lessons for all levels and ages, from beginners (A1) to advanced learners (C1). Whether you’re a young child, a teenager, or an adult, I provide tailored courses to meet your specific needs and goals.",
+    "list": [
+      {
+        "title": "For Kids (10+ years old)",
+        "backText": "Fun, interactive lessons that engage young learners and build a strong foundation in English."
+      },
+      {
+        "title": "For Teens & Adults",
+        "backText": "Focus on grammar, vocabulary, speaking, writing, and listening to improve fluency and confidence."
+      },
+      {
+        "title": "Exam Preparation",
+        "backText": "I offer specialized training for exams like IELTS, FCE, TOEFL, and others to help you achieve your desired scores."
+      },
+      {
+        "title": "Business English",
+        "backText": "Enhance professional communication with courses on emails, presentations, meetings, and negotiations."
+      },
+      {
+        "title": "Specialized Courses",
+        "backText": "Tailored lessons in areas like English for Travel, English for Academic Purposes, and Conversational English."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Connect for Expert Guidance and Personalized Learning"
+  },
+  "reviews": {
+    "title": "Reviews.",
+    "text": "What Learners Are Saying",
+    "list": [
+      {
+        "stars": 5,
+        "text": "The lessons are clear, engaging, and easy to follow. I actually enjoy learning now!"
+      },
+      {
+        "stars": 5,
+        "text": "I’ve learned more from a few of these lessons than in an entire semester of class. Great explanations and real examples that actually make sense."
+      },
+      {
+        "stars": 4,
+        "text": "Very helpful lessons, especially for writing and reading comprehension."
+      },
+      {
+        "stars": 5,
+        "text": "Each lesson is thoughtfully planned and easy to follow. I’ve improved my writing and reading skills so much thanks to this site."
+      },
+      {
+        "stars": 4,
+        "text": "The lessons are informative and interactive. I wish there were more quizzes or practice exercises, but the teaching is top-notch."
+      },
+      {
+        "stars": 5,
+        "text": "The lessons are practical and fun. I’m much more confident with English now!"
+      }
+    ]
+  },
+  "footer": {
+    "nav": "Find",
+    "contact": "Contact"
+  }
 }
