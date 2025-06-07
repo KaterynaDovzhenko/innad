@@ -1,52 +1,93 @@
-@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
-
-h1 {
-  text-align: start;
-  font-family: "Italiana", sans-serif;
-  font-weight: 400;
-  font-size: 120px;
-}
-
 .title {
   margin-left: 60px;
-  margin-top: -50px;
-}
-
-p {
-  text-align: start;
+  margin-top: -70px;
 }
 
 .containerTitle {
-  margin-top: 25px;
-  max-width: 714px;
+  max-width: 600px;
+  text-align: start;
 }
 
 .container {
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 120px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tutorWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 32px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--text-color);
+  flex: 1;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.rightContainer {
+  position: relative;
 }
 
 .img {
-  max-width: 505px;
-  height: 677px;
-  border-radius: 0px 0px 30px 30px;
-  position: absolute;
-  top: -20%;
-  right: 0%;
-  box-shadow: 14px 10px 1px 0px rgba(23, 23, 23, 0.273);
+  width: 505px;
+  height: 626px;
+  border-radius: 30px;
+  box-shadow: 14px 10px 10px 0px rgba(23, 23, 23, 0.2);
+  object-fit: cover;
 }
 
-.bg {
-  width: 400px;
-  height: 773px;
-  background-color: var(--secondary-color);
+.badge {
   position: absolute;
-  top: -20%;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  padding: 20px 24px;
+  box-shadow: 10px 15px 20px 0px rgba(23, 23, 23, 0.2);
+  animation: float 3s ease-in-out infinite;
+  z-index: 1;
+  text-align: start;
+}
+
+.badgeNumber {
+  color: var(--accent-color);
+  font-size: 35px;
+}
+
+.badgeLabel {
+  font-size: 16px;
+}
+
+.badgeBottomLeft {
+  bottom: -5%;
+  left: -15%;
+}
+
+.badgeTopRight {
+  top: -5%;
   right: -10%;
-  z-index: -1;
-  border-radius: 0px 0px 30px 30px;
-  box-shadow: 14px 10px 1px 0px rgba(23, 23, 23, 0.273);
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .listLangTop {

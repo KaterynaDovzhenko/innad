@@ -1,0 +1,50 @@
+.item {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(35, 35, 35, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.item:hover {
+  transform: scale(1.01);
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 40%;
+  right: 200px;
+  transform: translateY(-50%) scale(0.8) rotate(0deg);
+  width: 160px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1.05) rotate(5deg);
+}
+
+.img {
+  width: 284px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  will-change: transform, opacity;
+  max-width: none;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: start;
+  margin-bottom: 22px;
+}

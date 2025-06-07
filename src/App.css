@@ -1,11 +1,13 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--extra-color);
+  scroll-behavior: smooth;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }

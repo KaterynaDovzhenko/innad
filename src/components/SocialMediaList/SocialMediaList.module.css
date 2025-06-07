@@ -5,8 +5,16 @@
 
 .list > li {
   transition: transform 0.3s ease;
+  border-radius: 40px;
+  background: rgba(231, 231, 231, 0.1);
+  width: 39px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list > li:hover {
-  transform: scale(1.35);
+  transform: scale(1.15);
+  background: rgba(231, 231, 231, 0.3);
 }

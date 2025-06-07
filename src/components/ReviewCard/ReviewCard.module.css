@@ -1,0 +1,18 @@
+.card {
+  padding: 30px 0 15px 0;
+  border-radius: 25px;
+  max-width: 505px;
+  text-align: start;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.stars {
+  font-size: 25px;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

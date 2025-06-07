@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  width: 778px;
+  padding: 40px;
+  flex-direction: column;
+  gap: 22px;
+  border-radius: 30px;
+  background: var(--bg-color);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  text-align: start;
+}
+
+.input {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(23, 23, 23, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border: 2px solid var(--accent-color);
+  outline: none;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 22px;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.radioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.radioContainer input {
+  margin-right: 8px;
+}
+
+.btn {
+  color: var(--bg-color);
+  padding: 20px;
+  width: 100%;
+  border-radius: 15px;
+  background: var(--accent-color);
+  box-shadow: 5px 5px 4px 0px rgba(23, 23, 23, 0.25);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--text-color);
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.error {
+  color: var(--accent-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

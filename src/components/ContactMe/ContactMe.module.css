@@ -3,11 +3,22 @@
   position: relative;
 }
 
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .title {
-  font-family: "Work Sans";
   font-size: 35px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+  font-family: "Italiana";
 }
 
 .icon {

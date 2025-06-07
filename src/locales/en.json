@@ -1,6 +1,10 @@
 {
   "text-homepage": "Whether you’re aiming to improve your grammar, expand your vocabulary, or prepare for exams, I provide personalized lessons that cater to your individual needs. Together, we’ll build confidence in your English skills and help you reach your goals—one step at a time.",
   "contact-btn": "Contact Me",
+  "book-this-class": "Book This Class",
+  "title": "English Tutor",
+  "badgeStudents": "Students Taught",
+  "badgeYears": "Years Experience",
 
   "nav": {
     "home": "Home",
@@ -24,61 +28,167 @@
     "list": [
       {
         "title": "For Kids (10+ years old)",
-        "backText": "Fun, interactive lessons that engage young learners and build a strong foundation in English."
+        "description": "Fun, interactive lessons that engage young learners and build a strong foundation in English."
       },
       {
         "title": "For Teens & Adults",
-        "backText": "Focus on grammar, vocabulary, speaking, writing, and listening to improve fluency and confidence."
+        "description": "Focus on grammar, vocabulary, speaking, writing, and listening to improve fluency and confidence."
       },
       {
         "title": "Exam Preparation",
-        "backText": "I offer specialized training for exams like IELTS, FCE, TOEFL, and others to help you achieve your desired scores."
+        "description": "I offer specialized training for exams like IELTS, FCE, TOEFL, and others to help you achieve your desired scores."
       },
       {
         "title": "Business English",
-        "backText": "Enhance professional communication with courses on emails, presentations, meetings, and negotiations."
+        "description": "Enhance professional communication with courses on emails, presentations, meetings, and negotiations."
       },
       {
         "title": "Specialized Courses",
-        "backText": "Tailored lessons in areas like English for Travel, English for Academic Purposes, and Conversational English."
+        "description": "Tailored lessons in areas like English for Travel, English for Academic Purposes, and Conversational English."
       }
     ]
   },
+  "pricing": {
+    "individual": {
+      "title": "Individual Lessons",
+      "description": "One-on-one personalized learning",
+      "list": ["Personal Focus", "Custom Pace", "Direct Feedback"],
+      "price": "$35",
+      "extra": "/class",
+      "feature": ["95% success", "2x faster"],
+      "details": [
+        "Personalized attention and feedback",
+        "Flexible scheduling",
+        "Faster progress based on your pace",
+        "Customized learning materials"
+      ]
+    },
+    "group": {
+      "title": "Group Classes",
+      "description": "Collaborative learning experience",
+      "list": ["Social Learning", "Cost Effective", "Peer Support"],
+      "price": "$25",
+      "extra": "/class",
+      "feature": ["89% success", "1.5x faster"],
+      "details": [
+        "Collaborative and interactive learning",
+        "Great for practicing conversation",
+        "More affordable per person",
+        "Cultural exchange opportunities"
+      ]
+    }
+  },
   "contact": {
-    "title": "Connect for Expert Guidance and Personalized Learning"
+    "title": "Connect for Expert Guidance and Personalized Learning",
+    "description": "Learn English with a tutor who listens, adapts, and supports you. Every lesson is personalized to your level, your goals, and your pace—so you can build real confidence and speak with ease."
   },
   "reviews": {
     "title": "Reviews.",
-    "text": "What Learners Are Saying",
+    "text": "Trusted by learners from all over the world, these reviews reflect real experiences and real progress. Whether they started as complete beginners or wanted to refine their advanced skills, each student brought unique goals—and left with greater confidence, clarity, and fluency. Take a look at what they’ve shared about their journey.",
     "list": [
       {
         "stars": 5,
-        "text": "The lessons are clear, engaging, and easy to follow. I actually enjoy learning now!"
+        "text": "The lessons are clear, engaging, and easy to follow. I actually enjoy learning now! It's refreshing to finally feel motivated to study after struggling with boring textbooks for so long."
       },
       {
         "stars": 5,
-        "text": "I’ve learned more from a few of these lessons than in an entire semester of class. Great explanations and real examples that actually make sense."
+        "text": "I’ve learned more from a few of these lessons than in an entire semester of class. Great explanations and real examples that actually make sense. It’s like having a personal tutor who actually gets how you learn."
       },
       {
         "stars": 4,
-        "text": "Very helpful lessons, especially for writing and reading comprehension."
+        "text": "Very helpful lessons, especially for writing and reading comprehension. I’ve noticed real improvement in how I structure essays and understand complex texts."
       },
       {
         "stars": 5,
-        "text": "Each lesson is thoughtfully planned and easy to follow. I’ve improved my writing and reading skills so much thanks to this site."
+        "text": "Each lesson is thoughtfully planned and easy to follow. I’ve improved my writing and reading skills so much thanks to this site. The feedback I received has made a real difference in how I communicate."
       },
       {
         "stars": 4,
-        "text": "The lessons are informative and interactive. I wish there were more quizzes or practice exercises, but the teaching is top-notch."
+        "text": "The lessons are informative and interactive. I wish there were more quizzes or practice exercises, but the teaching is top-notch and the explanations are super clear."
       },
       {
         "stars": 5,
-        "text": "The lessons are practical and fun. I’m much more confident with English now!"
+        "text": "The lessons are practical and fun. I’m much more confident with English now! I used to avoid speaking altogether, but now I’m participating in meetings and making small talk with ease."
+      },
+      {
+        "stars": 5,
+        "text": "As someone who was nervous about returning to English after years, this site has been a game changer. The pace is just right, and the topics are relevant to everyday life and work situations."
+      },
+      {
+        "stars": 5,
+        "text": "What I love most is the clarity and structure. No fluff, no confusion—just well-organized lessons that actually teach you something. I’ve recommended it to my classmates and even my teacher!"
       }
     ]
   },
+  "contactForm": {
+    "title": "Let’s Get in Touch",
+    "description": "Have a question or ready to start your learning journey? Fill out the form below and I’ll get back to you shortly.",
+    "fields": {
+      "name": "Name",
+      "phone": "Phone Number",
+      "email": "Email",
+      "classFormat": "Class Format",
+      "classType": "Class Type",
+      "message": "Your Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "phone": "Your phone number",
+      "email": "Your email",
+      "message": "Your message"
+    },
+    "options": {
+      "individual": "Individual",
+      "group": "Group",
+      "kids": "For Kids (10+ years old)",
+      "teensAdults": "For Teens & Adults",
+      "exam": "Exam Preparation",
+      "business": "Business English",
+      "specialized": "Specialized Courses"
+    },
+    "button": "Send Message",
+    "success": "Message sent! Check your email for confirmation.",
+    "error": "Oops! Something went wrong.",
+    "contactInfo": {
+      "title": "Contact Information",
+      "items": [
+        {
+          "icon": "📧",
+          "label": "inna.dovzhenko@gmail.com"
+        },
+        {
+          "icon": "⏰",
+          "label": "Response within 24 hours"
+        },
+        {
+          "icon": "🌍",
+          "label": "Online lessons available worldwide"
+        }
+      ]
+    },
+    "whyChooseMe": {
+      "title": "Why Choose Me?",
+      "items": [
+        "25+ years of teaching experience",
+        "Personalized learning approach",
+        "Proven track record with 200+ students",
+        "Flexible scheduling options"
+      ]
+    }
+  },
+
   "footer": {
     "nav": "Find",
     "contact": "Contact"
+  },
+  "validation": {
+    "nameTooShort": "Name is too short",
+    "nameTooLong": "Name is too long",
+    "nameRequired": "Name is required",
+    "phoneInvalid": "Phone number is not valid",
+    "phoneRequired": "Phone is required",
+    "emailInvalid": "Invalid email address",
+    "emailRequired": "Email is required",
+    "messageTooLong": "Message is too long"
   }
 }

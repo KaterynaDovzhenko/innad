@@ -7,8 +7,11 @@ export default function ContactMe() {
   const { t } = useTranslation();
   return (
     <section className={css.section}>
-      <h3 className={css.title}>{t("contact.title")}</h3>
-      <ContactBtn></ContactBtn>
+      <div className={css.container}>
+        <h3 className={css.title}>{t("contact.title")}</h3>
+        <p>{t("contact.description")}</p>
+        <ContactBtn></ContactBtn>
+      </div>
       <img
         src={Icon}
         alt="Education Icon"
