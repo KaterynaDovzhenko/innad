@@ -4,6 +4,7 @@
   color: var(--bg-color);
   padding: 14px 20px;
   border-radius: 15px;
+  pointer-events: auto;
 
   margin-top: 16px;
   transition: background-color 0.3s ease, transform 0.3s ease;
