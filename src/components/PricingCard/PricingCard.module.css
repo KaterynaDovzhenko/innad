@@ -119,6 +119,13 @@
   justify-content: center;
   align-items: center;
   white-space: nowrap;
+  font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+  .priceContainer ul li {
+    font-size: 15px;
+  }
 }
 
 .iconFeature {
