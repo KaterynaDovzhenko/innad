@@ -1,5 +1,11 @@
 .section {
-  padding: 80px 0;
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 .title {
@@ -16,7 +22,19 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
 }
 
 .rightContainer ul {
@@ -35,7 +53,13 @@
   font-family: Italiana;
   font-size: 30px;
   font-weight: 400;
-  text-align: start;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rightContainer h3 {
+    align-items: start;
+  }
 }
 
 .rightContainer div:first-child {

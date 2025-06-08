@@ -1,10 +1,23 @@
 .section {
-  padding: 80px 0;
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 .container {
   display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 62px;
+  grid-template-columns: 1fr;
   justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }

@@ -6,4 +6,27 @@
   --primary-color: #b3af9c;
   --secondary-color: #594335;
   --third-color: #d6ccb4;
+
+  /* Breakpoints */
+  /* --bp-mobile: 375px; */
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+
+  /* Font Sizes */
+  --h1-size: 120px;
+  --h2-size: 30px;
+  --h3-size: 35px;
+  --h4-size: 25px;
+  --body-size: 18px;
+  --small-text: 16px;
+
+  /* Mobile Font Sizes */
+
+  --h1-size-mobile: 120px;
+  --h2-size-mobile: 24px;
+  --h3-size-mobile: 22px;
+  --small-text-mobile: 14px;
+  /* Font Weights */
+
+  --regular: 400;
 }

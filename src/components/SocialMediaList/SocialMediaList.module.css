@@ -1,6 +1,13 @@
 .list {
   display: flex;
   gap: 15px;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .list {
+    margin-top: 0px;
+  }
 }
 
 .list > li {

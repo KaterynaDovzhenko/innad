@@ -6,12 +6,16 @@ import bgWebp from "../../img/bg.webp";
 import arrowPrevIcon from "../../img/arrow_prev-icon.svg";
 import arrowNextIcon from "../../img/arrow_next-icon.svg";
 
+import useIsTablet from "../../hooks/useIsTablet";
+
 import css from "./ReviewsPage.module.css";
 import { useEffect, useState, useCallback } from "react";
 import { useSwipeable } from "react-swipeable";
 
 export default function ReviewsPage() {
   const { t } = useTranslation();
+  const isTablet = useIsTablet();
+
   const reviews = t("reviews.list", { returnObjects: true });
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,20 +54,32 @@ export default function ReviewsPage() {
   return (
     <section id="reviews">
       <Title>{t("reviews.title")}</Title>
-      <h3 className={css.text}>{t("reviews.text")}</h3>
+      <p data-aos="fade-up" data-aos-delay="200" className={css.text}>
+        {t("reviews.text")}
+      </p>
       <div className={css.container}>
-        <div className={css.leftBox}>
-          <picture>
-            <source srcSet={bgWebp} type="image/webp" />
-            <source srcSet={bgJpg} type="image/jpeg" />
-            <img
-              className={css.img}
-              src={bgJpg}
-              alt="Inna Dovzhenko english tutor"
-            />
-          </picture>
-        </div>
-        <div className={css.RightBox}>
+        {!isTablet && (
+          <div
+            data-aos="fade-left"
+            data-aos-delay="300"
+            className={css.leftBox}
+          >
+            <picture>
+              <source srcSet={bgWebp} type="image/webp" />
+              <source srcSet={bgJpg} type="image/jpeg" />
+              <img
+                className={css.img}
+                src={bgJpg}
+                alt="Inna Dovzhenko english tutor"
+              />
+            </picture>
+          </div>
+        )}
+        <div
+          data-aos="fade-right"
+          data-aos-delay="200"
+          className={css.RightBox}
+        >
           <div className={css.cardWrapper} {...handlers}>
             <div className={css.progressBar}>
               <div

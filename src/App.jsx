@@ -10,8 +10,15 @@ import ContactPage from "./pages/ContactPage/ContactPage.jsx";
 import Footer from "./components/Footer/Footer";
 import { useState, useEffect } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
   const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    AOS.init({ duration: 600, once: true });
+  }, []);
 
   useEffect(() => {
     const sections = [

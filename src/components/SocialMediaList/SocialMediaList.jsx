@@ -8,7 +8,7 @@ import css from "./SocialMediaList.module.css";
 export default function SocialMediaList() {
   return (
     <ul className={css.list}>
-      <li>
+      <li data-aos="fade-down" data-aos-delay="100">
         <a
           href="https://www.facebook.com/profile.php?id=100005972346872"
           target="_blank"
@@ -17,7 +17,7 @@ export default function SocialMediaList() {
           <img src={facebook} alt="Facebook" />
         </a>
       </li>
-      <li>
+      <li data-aos="fade-down" data-aos-delay="150">
         <a
           href="https://www.instagram.com/innapanovagm?igsh=MWtrdHFscWMzeHE5cA=="
           target="_blank"
@@ -26,7 +26,7 @@ export default function SocialMediaList() {
           <img src={instagram} alt="Instagram" />
         </a>
       </li>
-      <li>
+      <li data-aos="fade-down" data-aos-delay="200">
         <a
           href="https://www.linkedin.com/in/inna-dovzhenko-8a8432a0/"
           target="_blank"
@@ -35,7 +35,7 @@ export default function SocialMediaList() {
           <img src={linkedin} alt="LinkedIn" />
         </a>
       </li>
-      <li>
+      <li data-aos="fade-down" data-aos-delay="250">
         <a
           href="https://wa.me/380672200730"
           target="_blank"
@@ -44,7 +44,7 @@ export default function SocialMediaList() {
           <img src={whatsapp} alt="WhatsApp" />
         </a>
       </li>
-      <li>
+      <li data-aos="fade-down" data-aos-delay="300">
         <a
           href="https://t.me/Inna_59"
           target="_blank"

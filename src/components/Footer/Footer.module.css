@@ -3,10 +3,16 @@
 }
 
 .container {
-  padding: 70px 100px;
+  padding: 60px 16px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 70px 100px;
+  }
 }
 
 .img {
@@ -24,7 +30,13 @@
 
 .linkContainer {
   display: flex;
-  gap: 110px;
+  gap: 60px;
+}
+
+@media (min-width: 768px) {
+  .linkContainer {
+    gap: 110px;
+  }
 }
 
 .rightContainer {
@@ -32,6 +44,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
 .title {
   font-family: Italiana;
   font-size: 30px;

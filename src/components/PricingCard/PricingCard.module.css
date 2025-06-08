@@ -1,6 +1,6 @@
 .card {
   background-color: var(--bg-color);
-  padding: 40px 50px 60px 50px;
+  padding: 20px 30px;
   border-radius: 15px;
   box-shadow: 0px -10px 0px 0px #171717,
     10px 10px 22.4px 0px rgba(23, 23, 23, 0.5);
@@ -11,6 +11,13 @@
 .card:hover:not(.selected) {
   transform: scale(1.01);
 }
+
+@media (min-width: 768px) {
+  .card {
+    padding: 40px 50px 60px 50px;
+  }
+}
+
 .selected {
   border: 3px solid var(--accent-color);
   box-shadow: 0px -10px 0px 0px #ef5848,
@@ -29,13 +36,17 @@
 }
 
 .title {
-  font-family: "Work Sans";
-  font-size: 35px;
+  font-size: var(--h4-size);
   font-weight: 400;
 }
 
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--h3-size);
+  }
+}
+
 .description {
-  font-family: "Work Sans";
   font-size: 16px;
   text-align: center;
   margin-bottom: 20px;
@@ -43,12 +54,19 @@
 
 .list {
   display: flex;
-  gap: 22px;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
 }
 
+@media (min-width: 1024px) {
+  .list {
+    flex-direction: row;
+    gap: 22px;
+  }
+}
+
 .list > li {
-  font-family: "Work Sans";
   font-size: 15px;
   padding: 5px 18px;
   background-color: var(--extra-color);
@@ -56,11 +74,17 @@
 }
 
 .priceContainer {
-  padding: 30px 0px;
+  padding: 20px 0px;
   background-color: var(--extra-color);
   border-radius: 30px;
   margin-top: 36px;
   margin-bottom: 36px;
+}
+
+@media (min-width: 1024px) {
+  .priceContainer {
+    padding: 30px 0px;
+  }
 }
 
 .price {
@@ -80,6 +104,13 @@
   display: flex;
   gap: 12px;
   justify-content: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .priceContainer ul {
+    margin-top: 0;
+  }
 }
 
 .priceContainer ul li {
@@ -97,11 +128,24 @@
 
 .detailsList {
   text-align: start;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .detailsList {
+    margin-bottom: 36px;
+  }
 }
 
 .detailsList > li {
   display: flex;
   gap: 6px;
+  font-size: var(--small-text);
+}
+
+@media (min-width: 768px) {
+  .detailsList > li {
+    font-size: var(--body-size);
+  }
 }

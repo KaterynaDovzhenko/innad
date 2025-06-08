@@ -1,34 +1,70 @@
 .section {
   position: relative;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
-/* .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  align-items: start;
-} */
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 100px;
+  }
+}
 
 .content {
-  margin-top: 60px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 22px;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .left {
   text-align: start;
-  max-width: 505px;
+  max-width: 605px;
 }
 
 .title {
-  font-size: 35px;
+  font-size: var(--h3-size-mobile);
   font-weight: 400;
   text-align: start;
 }
 
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--h4-size);
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: var(--h3-size);
+  }
+}
+
 .right {
   max-width: 610px;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .right {
+    margin-top: 42px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .right {
+    margin-top: 0px;
+  }
 }
 
 .icon {
@@ -38,17 +74,33 @@
 }
 
 .iconBig {
-  width: 160px;
-  height: 160px;
-  top: 10%;
-  left: 40%;
+  width: 95px;
+  height: 95px;
+  top: 18%;
+  left: 70%;
   transform: rotate(-18deg);
+}
+
+@media (min-width: 1024px) {
+  .iconBig {
+    width: 160px;
+    height: 160px;
+    top: 10%;
+    left: 40%;
+  }
 }
 
 .iconSmall {
   width: 76px;
   height: 76px;
-  top: 50%;
-  left: 25%;
+  top: 55%;
+  left: 15%;
   transform: rotate(23deg);
+}
+
+@media (min-width: 1024px) {
+  .iconSmall {
+    top: 50%;
+    left: 25%;
+  }
 }

@@ -43,7 +43,7 @@ export default function ContactForm() {
   });
   return (
     <form className={css.form} onSubmit={formik.handleSubmit}>
-      <div className={css.field}>
+      <div data-aos="fade-up" data-aos-delay="200" className={css.field}>
         <label htmlFor="name" className={css.label}>
           {t("contactForm.fields.name")}
         </label>
@@ -62,7 +62,7 @@ export default function ContactForm() {
         )}
       </div>
       <div className={css.contactContainer}>
-        <div className={css.field}>
+        <div data-aos="fade-up" data-aos-delay="200" className={css.field}>
           <label htmlFor="phone" className={css.label}>
             {t("contactForm.fields.phone")}
           </label>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             <div className={css.error}>{formik.errors.phone}</div>
           )}
         </div>
-        <div className={css.field}>
+        <div data-aos="fade-up" data-aos-delay="200" className={css.field}>
           <label htmlFor="email" className={css.label}>
             {t("contactForm.fields.email")}
           </label>
@@ -99,7 +99,7 @@ export default function ContactForm() {
           )}
         </div>
       </div>
-      <div className={css.field}>
+      <div data-aos="fade-up" data-aos-delay="200" className={css.field}>
         <legend className={css.label}>
           {t("contactForm.fields.classFormat")}
         </legend>
@@ -126,7 +126,7 @@ export default function ContactForm() {
           </label>
         </div>
       </div>
-      <div className={css.field}>
+      <div data-aos="fade-up" data-aos-delay="200" className={css.field}>
         <label htmlFor="classType" className={css.label}>
           {t("contactForm.fields.classType")}
         </label>
@@ -147,7 +147,7 @@ export default function ContactForm() {
           </option>
         </select>
       </div>
-      <div className={css.field}>
+      <div data-aos="fade-up" data-aos-delay="200" className={css.field}>
         <label htmlFor="message" className={css.label}>
           {t("contactForm.fields.message")}
         </label>

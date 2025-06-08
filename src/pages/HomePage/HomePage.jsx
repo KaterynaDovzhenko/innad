@@ -2,25 +2,43 @@ import css from "./HomePage.module.css";
 import profileWebp from "../../img/profile.webp";
 import profileJpg from "../../img/profile.jpg";
 import ContactBtn from "../../components/ContactBtn/ContactBtn";
+import Blur from "../../components/Blur/Blur";
+
+import useIsTablet from "../../hooks/useIsTablet";
 import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
   const { t } = useTranslation();
+  const isTablet = useIsTablet();
+
   return (
     <section id="home" className={css.container}>
+      <Blur className={css.blur}></Blur>
       <div className={css.content}>
         <div className={css.containerTitle}>
-          <h1>Inna</h1>
-          <h1 className={css.title}>Dovzhenko</h1>
-          <div className={css.tutorWrapper}>
+          <h1 data-aos="fade-up">Inna</h1>
+          <h1 data-aos="fade-up" data-aos-delay="200" className={css.title}>
+            Dovzhenko
+          </h1>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className={css.tutorWrapper}
+          >
             <div className={css.line}></div>
             <span className={css.label}>{t("title")}</span>
             <div className={css.line}></div>
           </div>
-          <p>{t("text-homepage")}</p>
+          <p data-aos="fade-up" data-aos-delay="100">
+            {t("text-homepage")}
+          </p>
           <ContactBtn></ContactBtn>
         </div>
-        <div className={css.rightContainer}>
+        <div
+          data-aos="fade-right"
+          data-aos-delay="100"
+          className={css.rightContainer}
+        >
           <picture>
             <source srcSet={profileWebp} type="image/webp" />
             <source srcSet={profileJpg} type="image/jpeg" />
@@ -40,22 +58,26 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <ul className={css.listLangTop}>
-        <li>A1</li>
-        <li>A2</li>
-        <li>B1</li>
-        <li>B2</li>
-        <li>C1</li>
-        <li>C2</li>
-      </ul>
-      <ul className={css.listLangBtm}>
-        <li>A1</li>
-        <li>A2</li>
-        <li>B1</li>
-        <li>B2</li>
-        <li>C1</li>
-        <li>C2</li>
-      </ul>
+      {!isTablet && (
+        <>
+          <ul className={css.listLangTop}>
+            <li>A1</li>
+            <li>A2</li>
+            <li>B1</li>
+            <li>B2</li>
+            <li>C1</li>
+            <li>C2</li>
+          </ul>
+          <ul className={css.listLangBtm}>
+            <li>A1</li>
+            <li>A2</li>
+            <li>B1</li>
+            <li>B2</li>
+            <li>C1</li>
+            <li>C2</li>
+          </ul>
+        </>
+      )}
     </section>
   );
 }

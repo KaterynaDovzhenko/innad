@@ -16,16 +16,22 @@ export default function ContactPage() {
 
   return (
     <section id="contact" className={css.section}>
-      <h2 className={css.title}> {t("contactForm.title")}</h2>
-      <p className={css.description}> {t("contactForm.description")}</p>
+      <h2 data-aos="fade-up" data-aos-delay="100" className={css.title}>
+        {t("contactForm.title")}
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="200" className={css.description}>
+        {t("contactForm.description")}
+      </p>
       <div className={css.container}>
         <ContactForm></ContactForm>
         <div className={css.rightContainer}>
           <div>
-            <h3>{t("contactForm.contactInfo.title")}</h3>
+            <h3 data-aos="fade-right" data-aos-delay="100">
+              {t("contactForm.contactInfo.title")}
+            </h3>
             <ul>
               {contactInfo.map((item, index) => (
-                <li key={index}>
+                <li data-aos="fade-down" data-aos-delay="200" key={index}>
                   <p>{item.icon}</p>
                   <p>{item.label}</p>
                 </li>
@@ -33,10 +39,13 @@ export default function ContactPage() {
             </ul>
           </div>
           <div>
-            <h3> {t("contactForm.whyChooseMe.title")}</h3>
+            <h3 data-aos="fade-left" data-aos-delay="100">
+              {" "}
+              {t("contactForm.whyChooseMe.title")}
+            </h3>
             <ul>
               {features.map((item, index) => (
-                <li key={index}>
+                <li data-aos="fade-down" data-aos-delay="200" key={index}>
                   <img src={checkMarkIcon} alt="Check Mark icon" />
                   <p>{item}</p>
                 </li>

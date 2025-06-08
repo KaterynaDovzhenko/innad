@@ -16,6 +16,8 @@ export default function PricingCard({ type, data, isSelected, onSelect }) {
 
   return (
     <div
+      data-aos="fade-down"
+      data-aos-delay="100"
       className={`${css.card} ${isSelected ? css.selected : ""}`}
       onClick={handleClick}
     >

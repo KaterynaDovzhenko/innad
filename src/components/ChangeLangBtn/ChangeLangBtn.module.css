@@ -1,18 +1,25 @@
 .activeBtn {
   background-color: var(--text-color);
   color: var(--bg-color);
-  padding: 10px 20px;
+  padding: 8px 14px;
   border-radius: 15px;
-  font-size: 25px;
+  font-size: 16px;
   border: 2px solid var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .activeBtn {
+    font-size: 25px;
+    padding: 10px 20px;
+  }
 }
 
 .defaultBtn {
   border: 2px solid var(--text-color);
   color: var(--bg-color);
-  padding: 10px 20px;
+  padding: 8px 14px;
   border-radius: 15px;
-  font-size: 25px;
+  font-size: 16px;
   transition: background-color 0.5s ease;
 }
 
@@ -20,7 +27,19 @@
   background-color: var(--text-color);
 }
 
+@media (min-width: 768px) {
+  .defaultBtn {
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+}
 .container {
   display: flex;
-  gap: 20px;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    gap: 20px;
+  }
 }

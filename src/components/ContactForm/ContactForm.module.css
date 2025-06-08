@@ -1,11 +1,24 @@
 .form {
   display: flex;
-  width: 778px;
-  padding: 40px;
+  width: 100%;
+  padding: 20px 30px;
   flex-direction: column;
   gap: 22px;
   border-radius: 30px;
   background: var(--bg-color);
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 704px;
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    width: 778px;
+  }
 }
 
 .field {
@@ -33,9 +46,20 @@
 
 .contactContainer {
   display: flex;
+  flex-direction: column;
   gap: 22px;
   align-self: stretch;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .contactContainer {
+    display: flex;
+    gap: 22px;
+    align-self: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .radioContainer {

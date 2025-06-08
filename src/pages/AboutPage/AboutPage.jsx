@@ -13,19 +13,27 @@ export default function AboutPage() {
         <Title>{t("about.title")}</Title>
         <div className={css.content}>
           <div className={css.left}>
-            <h3 className={css.title}>{t("about.header")}</h3>
+            <h3 data-aos="fade-up" data-aos-delay="200" className={css.title}>
+              {t("about.header")}
+            </h3>
             <ContactBtn></ContactBtn>
           </div>
           <div className={css.right}>
-            <p>{t("about.text")}</p>
+            <p data-aos="fade-right" data-aos-delay="100">
+              {t("about.text")}
+            </p>
           </div>
         </div>
         <img
+          data-aos="fade-left"
+          data-aos-delay="100"
           src={Icon}
           alt="Education Icon"
           className={`${css.icon} ${css.iconBig}`}
         />
         <img
+          data-aos="fade-right"
+          data-aos-delay="100"
           src={Icon}
           alt="Education Icon"
           className={`${css.icon} ${css.iconSmall}`}

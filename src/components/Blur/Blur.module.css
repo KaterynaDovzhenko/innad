@@ -1,0 +1,10 @@
+.blur {
+  width: 688px;
+  height: 688px;
+  flex-shrink: 0;
+  border-radius: 688px;
+  background: rgba(239, 88, 72, 0.2);
+  filter: blur(95.5999984741211px);
+  position: absolute;
+  overflow: hidden;
+}

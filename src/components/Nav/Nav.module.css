@@ -32,10 +32,22 @@
   justify-content: space-between;
   position: fixed;
   width: 100vw;
-  padding: 15px 70px;
+  padding: 20px 46px 20px 16px;
   z-index: 2;
   background: rgba(242, 242, 242, 0.6);
   backdrop-filter: blur(15px);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 15px 70px;
+  }
 }
 
 .footerList {
@@ -56,4 +68,22 @@
 
 .active {
   color: var(--accent-color);
+}
+
+.mobilecontainer {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.burgerMenu {
+  margin-left: auto;
 }
