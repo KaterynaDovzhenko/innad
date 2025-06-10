@@ -16,20 +16,34 @@ export default function PricingCard({ type, data, isSelected, onSelect }) {
 
   return (
     <div
-      data-aos="fade-down"
-      data-aos-delay="100"
       className={`${css.card} ${isSelected ? css.selected : ""}`}
       onClick={handleClick}
     >
-      <img src={iconCard} alt={iconAlt} className={css.iconCard} />
-      <h3 className={css.title}>{data.title}</h3>
-      <p className={css.description}>{data.description}</p>
+      <img
+        data-aos="fade-down"
+        data-aos-delay="100"
+        src={iconCard}
+        alt={iconAlt}
+        className={css.iconCard}
+      />
+      <h3 data-aos="fade-down" data-aos-delay="100" className={css.title}>
+        {data.title}
+      </h3>
+      <p data-aos="fade-down" data-aos-delay="150" className={css.description}>
+        {data.description}
+      </p>
       <ul className={css.list}>
         {data.list.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li data-aos="fade-up" data-aos-delay="200" key={index}>
+            {item}
+          </li>
         ))}
       </ul>
-      <div className={css.priceContainer}>
+      <div
+        data-aos="fade-down"
+        data-aos-delay="100"
+        className={css.priceContainer}
+      >
         <div className={css.price}>
           <h3>{data.price}</h3>
           <p>{data.extra}</p>
@@ -48,7 +62,7 @@ export default function PricingCard({ type, data, isSelected, onSelect }) {
       </div>
       <ul className={css.detailsList}>
         {data.details.map((item, index) => (
-          <li key={index}>
+          <li data-aos="fade-up" data-aos-delay="100" key={index}>
             <img src={checkMarkIcon} alt="Check mark" className={css.icon} />
             {item}
           </li>
