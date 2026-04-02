@@ -17,19 +17,23 @@ export default function ContactMe() {
         </p>
         <ContactBtn></ContactBtn>
       </div>
-      <img
-        data-aos="fade-left"
-        src={Icon}
-        alt="Education Icon"
-        className={`${css.icon} ${css.iconBig}`}
-      />
-      <img
-        data-aos="fade-right"
-        data-aos-delay="100"
-        src={Icon}
-        alt="Education Icon"
-        className={`${css.icon} ${css.iconSmall}`}
-      />
+      <div className={`${css.iconWrap} ${css.iconBigWrap}`}>
+        <img
+          data-aos="fade-left"
+          src={Icon}
+          alt="Education Icon"
+          className={css.icon}
+        />
+      </div>
+      <div className={`${css.iconWrap} ${css.iconSmallWrap}`}>
+        <img
+          data-aos="fade-right"
+          data-aos-delay="100"
+          src={Icon}
+          alt="Education Icon"
+          className={css.icon}
+        />
+      </div>
       <Blur className={css.blur}></Blur>
     </section>
   );

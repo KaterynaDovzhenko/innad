@@ -32,12 +32,11 @@
   }
 }
 
-.icon {
+.iconWrap {
   position: absolute;
-  box-shadow: none;
 }
 
-.iconBig {
+.iconBigWrap {
   width: 90px;
   height: 90px;
   top: 70%;
@@ -46,15 +45,16 @@
 }
 
 @media (min-width: 768px) {
-  .iconBig {
+  .iconBigWrap {
     width: 160px;
     height: 160px;
     top: 50%;
     left: 0%;
+    transform: rotate(22deg);
   }
 }
 
-.iconSmall {
+.iconSmallWrap {
   width: 87px;
   height: 87px;
   top: 0%;
@@ -63,12 +63,18 @@
 }
 
 @media (min-width: 768px) {
-  .iconSmall {
+  .iconSmallWrap {
     width: 108px;
     height: 108px;
     top: 30%;
     left: 95%;
+    transform: rotate(-45deg);
   }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
 }
 
 .blur {

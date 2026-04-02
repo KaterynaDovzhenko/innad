@@ -3,66 +3,122 @@
 }
 
 .container {
-  padding: 60px 16px;
+  padding: 60px 16px 32px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-color: var(--secondary-color);
+  border-radius: 64px 64px 0 0;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 70px 100px;
+    padding: 80px 100px 40px;
   }
 }
 
-.img {
-  width: 273px;
-  height: 346px;
-  border-radius: 30px;
-  box-shadow: 14px 16px 19.9px 0px rgba(23, 23, 23, 0.5);
-  object-fit: cover;
-}
-
-.topContainer {
+.top {
   display: flex;
-  justify-content: space-between;
-}
-
-.linkContainer {
-  display: flex;
-  gap: 60px;
+  flex-direction: column;
+  gap: 48px;
 }
 
 @media (min-width: 768px) {
-  .linkContainer {
-    gap: 110px;
+  .top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
   }
 }
 
-.rightContainer {
+/* Left col — name + photo */
+.colLeft {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+}
+
+.name {
+  font-family: Italiana, serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 1024px) {
+  .name {
+    font-size: 68px;
+  }
+}
+
+.tagline {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-top: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.img {
+  width: 220px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 14px 16px 20px 0px rgba(23, 23, 23, 0.4);
+}
+
+@media (min-width: 1024px) {
+  .img {
+    width: 260px;
+    height: 330px;
+  }
+}
+
+/* Mid col — nav */
+.colMid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right col — contact */
+.colRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .title {
-  font-family: Italiana;
-  font-size: 30px;
+  font-family: Italiana, serif;
+  font-size: 28px;
   font-weight: 400;
   text-align: start;
-  margin-bottom: 60px;
-}
-
-.rights {
-  margin-top: 60px;
+  margin-bottom: 24px;
 }
 
 .email {
   display: block;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 15px;
+  opacity: 0.8;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  word-break: break-all;
 }
 
 .email:hover {
-  color: var(--third-color);
-  transform: scale(1.05);
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Bottom bar */
+.bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.rights {
+  font-size: 13px;
+  opacity: 0.4;
+  text-align: center;
 }

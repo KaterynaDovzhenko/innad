@@ -3,7 +3,9 @@
   font-family: Italiana;
   font-size: 30px;
   font-weight: 400;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .home:hover {
@@ -18,7 +20,9 @@
 
 .list > li {
   font-size: 20px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .list > li:hover {
@@ -52,13 +56,15 @@
 
 .footerList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: start;
-  gap: 10px;
+  gap: 32px;
 }
 
 .footerList > li {
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .footerList > li:hover {

@@ -1,113 +1,110 @@
 import Title from "../../components/Title/Title";
 import ReviewCard from "../../components/ReviewCard/ReviewCard";
 import { useTranslation } from "react-i18next";
-import bgJpg from "../../img/bg.jpg";
-import bgWebp from "../../img/bg.webp";
+import css from "./ReviewsPage.module.css";
+import { useEffect, useRef } from "react";
+import { useSwipeable } from "react-swipeable";
+import useIsTablet from "../../hooks/useIsTablet";
 import arrowPrevIcon from "../../img/arrow_prev-icon.svg";
 import arrowNextIcon from "../../img/arrow_next-icon.svg";
-
-import useIsTablet from "../../hooks/useIsTablet";
-
-import css from "./ReviewsPage.module.css";
-import { useEffect, useState, useCallback } from "react";
-import { useSwipeable } from "react-swipeable";
 
 export default function ReviewsPage() {
   const { t } = useTranslation();
   const isTablet = useIsTablet();
-
   const reviews = t("reviews.list", { returnObjects: true });
+  const doubled = [...reviews, ...reviews];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [show, setShow] = useState(true);
-
-  const handleNext = useCallback(() => {
-    setShow(false);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % reviews.length);
-      setShow(true);
-    }, 100);
-  }, [reviews.length]);
-
-  const handlePrev = () => {
-    setShow(false);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
-      setShow(true);
-    }, 100);
-  };
+  const trackRef = useRef(null);
+  const animRef = useRef(null);
+  const posRef = useRef(0);
+  const pausedRef = useRef(false);
+  const SPEED = 0.5;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [handleNext]);
+    const track = trackRef.current;
+    if (!track) return;
+
+    const halfWidth = track.scrollWidth / 2;
+
+    const tick = () => {
+      if (!pausedRef.current) {
+        posRef.current += SPEED;
+        if (posRef.current >= halfWidth) posRef.current -= halfWidth;
+        track.style.transform = `translateX(-${posRef.current}px)`;
+      }
+      animRef.current = requestAnimationFrame(tick);
+    };
+
+    animRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animRef.current);
+  }, []);
+
+  const scrollBy = (dir) => {
+    posRef.current += dir * 320;
+    const track = trackRef.current;
+    if (!track) return;
+    const halfWidth = track.scrollWidth / 2;
+    if (posRef.current < 0) posRef.current += halfWidth;
+    if (posRef.current >= halfWidth) posRef.current -= halfWidth;
+  };
 
   const handlers = useSwipeable({
-    onSwipeLeft: handleNext,
-    onSwipeRight: handlePrev,
+    onSwipeLeft: () => scrollBy(1),
+    onSwipeRight: () => scrollBy(-1),
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
+    trackMouse: false,
   });
 
   return (
-    <section id="reviews">
-      <Title>{t("reviews.title")}</Title>
-      <p data-aos="fade-up" data-aos-delay="200" className={css.text}>
-        {t("reviews.text")}
-      </p>
-      <div className={css.container}>
-        {!isTablet && (
-          <div
-            data-aos="fade-left"
-            data-aos-delay="300"
-            className={css.leftBox}
-          >
-            <picture>
-              <source srcSet={bgWebp} type="image/webp" />
-              <source srcSet={bgJpg} type="image/jpeg" />
-              <img
-                className={css.img}
-                src={bgJpg}
-                alt="Inna Dovzhenko english tutor"
-              />
-            </picture>
-          </div>
-        )}
-        <div
-          data-aos="fade-right"
-          data-aos-delay="200"
-          className={css.RightBox}
-        >
-          <div className={css.cardWrapper} {...handlers}>
-            <div className={css.progressBar}>
-              <div
-                key={currentIndex}
-                className={css.progress}
-                style={{ animationDuration: "6s" }}
-              ></div>
-            </div>
-            <ReviewCard review={reviews[currentIndex]} show={show}></ReviewCard>
-            <div className={css.arrows}>
-              <button
-                onClick={handlePrev}
-                aria-label="Previous Review"
-                className={css.arrowLeft}
-              >
-                <img src={arrowPrevIcon} alt="Arrow icon" />
-              </button>
-              <button
-                onClick={handleNext}
-                aria-label="Next Review"
-                className={css.arrowRight}
-              >
-                <img src={arrowNextIcon} alt="Arrow icon" />
-              </button>
-            </div>
-          </div>
-        </div>
+    <section id="reviews" className={css.section}>
+      <div className={css.header}>
+        <Title data-aos="fade-up" data-aos-delay="100">
+          {t("reviews.title")}
+        </Title>
+        <p data-aos="fade-up" data-aos-delay="100" className={css.text}>
+          {t("reviews.text")}
+        </p>
       </div>
+
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        className={css.trackWrap}
+        onMouseEnter={() => {
+          pausedRef.current = true;
+        }}
+        onMouseLeave={() => {
+          pausedRef.current = false;
+        }}
+        {...handlers}
+      >
+        <div className={css.track} ref={trackRef}>
+          {doubled.map((review, i) => (
+            <ReviewCard key={i} review={review} />
+          ))}
+        </div>
+        <div className={css.fadeLeft} />
+        <div className={css.fadeRight} />
+      </div>
+
+      {isTablet && (
+        <div className={css.arrows}>
+          <button
+            className={css.arrowBtn}
+            onClick={() => scrollBy(-1)}
+            aria-label="Previous"
+          >
+            <img src={arrowPrevIcon} alt="" />
+          </button>
+          <button
+            className={css.arrowBtn}
+            onClick={() => scrollBy(1)}
+            aria-label="Next"
+          >
+            <img src={arrowNextIcon} alt="" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

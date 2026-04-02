@@ -11,9 +11,7 @@
 }
 
 .list > li {
-  transition: transform 0.3s ease;
   border-radius: 40px;
-  background: rgba(231, 231, 231, 0.1);
   width: 39px;
   height: 39px;
   display: flex;
@@ -21,7 +19,25 @@
   align-items: center;
 }
 
-.list > li:hover {
-  transform: scale(1.15);
-  background: rgba(231, 231, 231, 0.3);
+.iconWrap {
+  border-radius: 40px;
+  background: rgba(231, 231, 231, 0.1);
+  width: 39px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.3s ease;
+}
+
+.iconWrap:hover {
+  transform: scale(1.25) translateY(-4px) rotate(6deg);
+  background: rgba(231, 231, 231, 0.25);
+}
+
+.iconWrap img {
+  width: 20px;
+  height: 20px;
 }
