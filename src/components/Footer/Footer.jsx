@@ -25,7 +25,7 @@ export default function Footer() {
               data-aos="fade-left"
               data-aos-delay="100"
               className={css.email}
-              href="mailto:inna.dovzhenkoo@gmail.com"
+              href="mailto:inna.dovzhenko@gmail.com"
             >
               inna.dovzhenko@gmail.com
             </a>
