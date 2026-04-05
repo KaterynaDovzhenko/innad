@@ -105,6 +105,13 @@
     opacity 0.2s ease,
     transform 0.2s ease;
   word-break: break-all;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .email {
+    text-align: start;
+  }
 }
 
 .email:hover {

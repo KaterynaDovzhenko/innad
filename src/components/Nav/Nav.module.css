@@ -56,9 +56,15 @@
 
 .footerList {
   display: flex;
-  flex-direction: row;
-  text-align: start;
+  flex-direction: column;
+  text-align: center;
   gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .footerList {
+    flex-direction: row;
+  }
 }
 
 .footerList > li {
