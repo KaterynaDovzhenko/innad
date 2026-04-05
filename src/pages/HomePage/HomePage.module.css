@@ -12,23 +12,11 @@
 
 .containerTitle {
   max-width: 600px;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .containerTitle {
-    text-align: start;
-  }
+  text-align: start;
 }
 
 .containerTitle p {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .containerTitle p {
-    text-align: start;
-  }
+  text-align: start;
 }
 
 .container {
