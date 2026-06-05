@@ -16,11 +16,25 @@ export default function AboutPage() {
             <h3 data-aos="fade-up" data-aos-delay="200" className={css.title}>
               {t("about.header")}
             </h3>
+            <h4
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className={css.subtitle}
+            >
+              {t("about.subheader")}
+            </h4>
             <ContactBtn></ContactBtn>
           </div>
           <div className={css.right}>
             <p data-aos="fade-right" data-aos-delay="100">
               {t("about.text")}
+            </p>
+            <p
+              className={css.subtext}
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              {t("about.subtext")}
             </p>
           </div>
         </div>

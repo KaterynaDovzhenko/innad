@@ -44,10 +44,10 @@ export default function PricingCard({ type, data, isSelected, onSelect }) {
         data-aos-delay="100"
         className={css.priceContainer}
       >
-        <div className={css.price}>
+        {/* <div className={css.price}>
           <h3>{data.price}</h3>
           <p>{data.extra}</p>
-        </div>
+        </div> */}
         <ul>
           {data.feature.map((item, index) => {
             const iconFeature = index === 0 ? timeIcon : growthIcon;

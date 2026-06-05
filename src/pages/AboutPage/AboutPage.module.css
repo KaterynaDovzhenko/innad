@@ -50,6 +50,29 @@
   }
 }
 
+.subtitle {
+  font-size: var(--h4-size-mobile);
+  font-weight: 400;
+  text-align: start;
+  margin-top: 14px;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: var(--h5-size);
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: var(--h4-size);
+  }
+}
+
+.subtext {
+  margin-top: 14px;
+}
+
 .right {
   max-width: 610px;
   margin-top: 32px;
