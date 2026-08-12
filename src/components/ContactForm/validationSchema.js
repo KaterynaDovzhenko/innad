@@ -9,11 +9,11 @@ export const createValidationSchema = (t) =>
     phone: Yup.string()
       .matches(
         /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/,
-        t("validation.phoneInvalid")
+        t("validation.phoneInvalid"),
       )
       .required(t("validation.phoneRequired")),
     email: Yup.string()
       .email(t("validation.emailInvalid"))
       .required(t("validation.emailRequired")),
-    message: Yup.string().min(5, t("validation.messageMin")).notRequired(),
+    message: Yup.string().notRequired(),
   });
