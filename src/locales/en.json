@@ -15,7 +15,7 @@
     "contact": "Contact"
   },
   "about": {
-    "title": "About.",
+    "title": "About",
     "header": "Empowering Minds with Marketing Expertise and Strategic Insight",
     "subheader": "Professional ESL Teacher | PhD | TESOL Certified",
     "text": "Personalized online English, Italian, and Ukrainian lessons focused on exams, travel, work, and conversation. With extensive teaching experience and academic expertise, I help students achieve their language goals with confidence.",
@@ -25,7 +25,7 @@
     "articles": "prestigious international journals and renowned academic conferences"
   },
   "lessons": {
-    "title": "Lessons.",
+    "title": "Lessons",
     "text": "I offer English lessons for all levels and ages, from beginners (A1) to advanced learners (C1). Whether you’re a young child, a teenager, or an adult, I provide tailored courses to meet your specific needs and goals.",
     "list": [
       {
@@ -85,7 +85,7 @@
     "description": "Learn English with a tutor who listens, adapts, and supports you. Every lesson is personalized to your level, your goals, and your pace—so you can build real confidence and speak with ease."
   },
   "reviews": {
-    "title": "Reviews.",
+    "title": "Reviews",
     "text": "Trusted by learners from all over the world, these authentic, verified reviews reflect real experiences and real progress.",
     "list": [
       {

@@ -29,7 +29,7 @@ export default function ContactForm() {
           "service_kzcktd8",
           selectedTemplate,
           values,
-          "WQaajm7b4bYxCeLaB"
+          "WQaajm7b4bYxCeLaB",
         );
         alert(t("contactForm.success"));
         resetForm();
