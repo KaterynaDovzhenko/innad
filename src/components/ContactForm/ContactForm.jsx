@@ -11,7 +11,7 @@ export default function ContactForm() {
   const validationSchema = createValidationSchema(t);
 
   const selectedTemplate =
-    currentLang === "uk" ? "template_wgh48ja" : "template_qbb9mdx";
+    currentLang === "uk" ? "template_ngfqi9w" : "template_5f1ehq9";
 
   const formik = useFormik({
     initialValues: {
@@ -22,19 +22,21 @@ export default function ContactForm() {
       classType: "kids",
       message: "",
     },
+
     validationSchema,
     onSubmit: async (values, { resetForm, setSubmitting }) => {
       try {
         await emailjs.send(
-          "service_kzcktd8",
+          "service_j6ffz1q",
           selectedTemplate,
           values,
-          "WQaajm7b4bYxCeLaB",
+          "rSGCsux5fr4Hku8Ia",
         );
         alert(t("contactForm.success"));
         resetForm();
       } catch (error) {
         console.error("Failed to send email", error);
+
         alert(t("contactForm.error"));
       } finally {
         setSubmitting(false);
